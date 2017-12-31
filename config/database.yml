@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: yelp_development
+  username: tom
+  password: yelp_db
+
+
+test:
+  <<: *default
+  database: yelp_test
+  username: tom
+  password: yelp_db
+
+
+production:
+  <<: *default
+  database: yelp_production
+  username: tom
+  password: yelp_db
